@@ -6,7 +6,7 @@
 
 ## How to Run
 1. Run LoadMazeExplorerApplication.java which requests for key strokes, select the required key strokes.
-2.
+2. Please look at https://github.com/hariraogotit/maze/blob/master/User_Stories_Usage_Of_Maze_App.doc which shows the screenshot output for each requirement
 3. Log is also available in log/log4j-application.log
 
 ## Highlevel overview
