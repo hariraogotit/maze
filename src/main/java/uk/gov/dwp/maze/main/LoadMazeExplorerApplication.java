@@ -39,16 +39,13 @@ public class LoadMazeExplorerApplication {
         String move = input.next();
         while(isValidInput(move)){
             if(L.equals(move) || LOWER_CASE_L.equals(move)) {
-                exploreMazeService.moveLeft(maze, explorer);
-            }
-            if(R.equals(move) || LOWER_CASE_R.equals(move)) {
-                exploreMazeService.moveRight(maze, explorer);
-            }
-            if(U.equals(move) || LOWER_CASE_U.equals(move)) {
-                exploreMazeService.moveUp(maze, explorer);
-            }
-            if(F.equals(move) || LOWER_CASE_F.equals(move)) {
-                exploreMazeService.moveForward(maze, explorer);
+                System.out.println(exploreMazeService.moveLeft(maze, explorer));
+            }else if(R.equals(move) || LOWER_CASE_R.equals(move)) {
+                System.out.println(exploreMazeService.moveRight(maze, explorer));
+            }else if(U.equals(move) || LOWER_CASE_U.equals(move)) {
+                System.out.println(exploreMazeService.moveUp(maze, explorer));
+            }else if(F.equals(move) || LOWER_CASE_F.equals(move)) {
+                System.out.println(exploreMazeService.moveForward(maze, explorer));
             }
             if(explorer.getPath().peek().isExit()){
                 return;

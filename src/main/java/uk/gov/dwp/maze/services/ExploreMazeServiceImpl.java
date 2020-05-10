@@ -4,6 +4,7 @@ package uk.gov.dwp.maze.services;
 import org.apache.log4j.Logger;
 
 import uk.gov.dwp.maze.constants.DirectionEnum;
+import uk.gov.dwp.maze.constants.MazeComponentEnum;
 import uk.gov.dwp.maze.models.Coordinate;
 import uk.gov.dwp.maze.models.Explorer;
 import uk.gov.dwp.maze.models.Maze;
@@ -54,7 +55,8 @@ public class ExploreMazeServiceImpl implements ExploreMazeService {
     }
 
     private String move(Coordinate coordinate, char[][] structure, Explorer explorer, DirectionEnum directionEnum){
-        if(isValidCoordinate(coordinate.getY(),coordinate.getX(),structure)){
+        if(isValidCoordinate(coordinate.getY(),coordinate.getX(),structure)
+                && !MazeComponentEnum.X.getComponent().equals(getWhatExists(coordinate, structure).get())){
             coordinate.setExit(false);
             coordinate.setDirectionEnum(directionEnum);
             if(F.trim().toCharArray()[0] == structure[explorer.getPath().peek().getY()][explorer.getPath().peek().getX()]){

@@ -30,7 +30,8 @@ public class ExploreMazeServiceImplTest {
 
     @Test
     public void testMoveForward_Return_Moved() {
-        assertTrue(MOVED.equals(exploreMazeService.moveForward(mazeWithStartPoint, explorerWithStartPoint)));
+        Explorer explorer = buildExplorer(1,1,DirectionEnum.MOVED_FORWARD);
+        assertTrue(MOVED.equals(exploreMazeService.moveForward(mazeWithStartPoint, explorer)));
     }
 
     @Test
@@ -41,7 +42,8 @@ public class ExploreMazeServiceImplTest {
 
     @Test
     public void testMoveUp_Return_Moved() {
-        assertTrue(MOVED.equals(exploreMazeService.moveUp(mazeWithStartPoint, explorerWithStartPoint)));
+        Explorer explorer = buildExplorer(1,2,DirectionEnum.MOVED_UP);
+        assertTrue(MOVED.equals(exploreMazeService.moveUp(mazeWithStartPoint, explorer)));
     }
 
     @Test
@@ -52,7 +54,7 @@ public class ExploreMazeServiceImplTest {
 
     @Test
     public void testMoveLeft_Return_Moved() {
-        Explorer explorer = buildExplorer(14,0,DirectionEnum.MOVED_LEFT);
+        Explorer explorer = buildExplorer(6,3,DirectionEnum.MOVED_LEFT);
         assertTrue(MOVED.equals(exploreMazeService.moveLeft(mazeWithStartPoint, explorer)));
     }
 
