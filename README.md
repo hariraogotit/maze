@@ -1,4 +1,4 @@
-# Maze Test DWP
+# Maze
 
 ## Assumptions
 1. Maze1.txt file is available in src/main/resources/Maze1.txt
